@@ -1,6 +1,74 @@
 -- 04_etl_fato.sql
--- ETL das tabelas fato
--- - Carga de fato_lancamento usando lancamentos_raw + dimensões
--- - Carga de fato_conta usando contas_raw + dimensões
+-- ETL das tabelas fato do Data Warehouse Administrativo-Financeiro
 
--- (nas próximas etapas vamos escrever os INSERT...SELECT aqui)
+--------------------------------------
+-- 1. Carga de fato_lancamento
+--------------------------------------
+-- Liga cada lançamento financeiro (caixa) às dimensões de tempo,
+-- categoria e centro de custo.
+
+-- Exemplo genérico (ajuste a sintaxe pro banco que você usar):
+
+-- TRUNCATE TABLE fato_lancamento;
+
+-- INSERT INTO fato_lancamento (
+--     id,
+--     id_tempo,
+--     id_categoria,
+--     id_centro,
+--     tipo,
+--     valor
+-- )
+-- SELECT
+--     l.id,
+--     t.id_tempo,
+--     cat.id_categoria,
+--     cc.id_centro,
+--     l.tipo,
+--     l.valor
+-- FROM lancamentos_raw l
+-- JOIN dim_tempo t
+--       ON t.data = l.data_movimento
+-- JOIN dim_categoria_financeira cat
+--       ON cat.nome = l.categoria
+-- JOIN dim_centro_custo cc
+--       ON cc.nome = l.centro_custo;
+
+--------------------------------------
+-- 2. Carga de fato_conta
+--------------------------------------
+-- Liga cada conta a pagar/receber às dimensões de tempo
+-- (vencimento e pagamento), categoria, centro de custo e pessoa.
+
+-- TRUNCATE TABLE fato_conta;
+
+-- INSERT INTO fato_conta (
+--     id,
+--     id_tempo_venc,
+--     id_tempo_pagto,
+--     id_categoria,
+--     id_centro,
+--     id_pessoa,
+--     tipo,
+--     valor
+-- )
+-- SELECT
+--     c.id,
+--     tv.id_tempo          AS id_tempo_venc,
+--     tp.id_tempo          AS id_tempo_pagto,
+--     cat.id_categoria,
+--     cc.id_centro,
+--     p.id_pessoa,
+--     c.tipo,
+--     c.valor
+-- FROM contas_raw c
+-- JOIN dim_tempo tv               -- data de vencimento
+--       ON tv.data = c.data_vencimento
+-- LEFT JOIN dim_tempo tp          -- data de pagamento (pode ser NULL)
+--       ON tp.data = c.data_pagamento
+-- JOIN dim_categoria_financeira cat
+--       ON cat.nome = c.categoria
+-- JOIN dim_centro_custo cc
+--       ON cc.nome = c.centro_custo
+-- JOIN dim_pessoa p
+--       ON p.nome = c.pessoa;
