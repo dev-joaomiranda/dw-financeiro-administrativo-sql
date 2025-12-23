@@ -1,0 +1,2 @@
+-- 01_schema_raw.sql
+-- Tabelas de estágio (dados operacionais)
