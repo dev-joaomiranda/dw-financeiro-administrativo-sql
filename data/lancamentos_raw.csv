@@ -1,1 +1,16 @@
 id,data_movimento,tipo,categoria,centro_custo,descricao,valor
+1,2025-11-01,Entrada,Vendas,Comercial,Recebimento de contrato mensal,8500.00
+2,2025-11-03,Saída,Salários,Operações,Pagamento folha operacional,4200.00
+3,2025-11-05,Saída,Aluguel,Administrativo,Aluguel escritório novembro,2500.00
+4,2025-11-10,Saída,Internet,Administrativo,Plano de internet corporativa,250.00
+5,2025-11-15,Entrada,Serviços,Operações,Serviço pontual para cliente X,3200.00
+6,2025-12-01,Entrada,Vendas,Comercial,Renovação contrato cliente Y,9000.00
+7,2025-12-02,Saída,Salários,Operações,Pagamento folha operacional,4300.00
+8,2025-12-05,Saída,Marketing,Comercial,Campanha de anúncios online,1200.00
+9,2025-12-08,Saída,Aluguel,Administrativo,Aluguel escritório dezembro,2500.00
+10,2025-12-12,Entrada,Serviços,Operações,Projeto especial cliente Z,4800.00
+11,2026-01-03,Entrada,Vendas,Comercial,Contrato novo cliente W,7500.00
+12,2026-01-05,Saída,Salários,Operações,Pagamento folha operacional,4400.00
+13,2026-01-09,Saída,Aluguel,Administrativo,Aluguel escritório janeiro,2500.00
+14,2026-01-10,Saída,Internet,Administrativo,Plano de internet corporativa,260.00
+15,2026-01-15,Saída,Marketing,Comercial,Impulsionamento redes sociais,900.00
