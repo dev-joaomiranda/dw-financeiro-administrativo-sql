@@ -1,1 +1,16 @@
 id,tipo,pessoa,categoria,centro_custo,data_emissao,data_vencimento,data_pagamento,valor
+1,Receber,Cliente Alfa,Vendas,Comercial,2025-10-25,2025-11-05,2025-11-06,3000.00
+2,Pagar,Fornecedor Aluguel,Aluguel,Administrativo,2025-10-28,2025-11-05,2025-11-05,2500.00
+3,Pagar,Operadora Internet,Internet,Administrativo,2025-11-01,2025-11-10,2025-11-09,250.00
+4,Receber,Cliente Beta,Serviços,Operações,2025-11-10,2025-11-25,2025-11-28,4200.00
+5,Pagar,Fornecedor RH,Salários,Operações,2025-11-20,2025-11-30,2025-11-30,4200.00
+6,Receber,Cliente Gama,Vendas,Comercial,2025-11-25,2025-12-05,,3500.00
+7,Pagar,Fornecedor Aluguel,Aluguel,Administrativo,2025-11-28,2025-12-05,,2500.00
+8,Pagar,Agência MKT,Marketing,Comercial,2025-11-30,2025-12-10,2025-12-12,1200.00
+9,Receber,Cliente Delta,Serviços,Operações,2025-12-05,2025-12-20,,4800.00
+10,Pagar,Fornecedor RH,Salários,Operações,2025-12-20,2025-12-30,2025-12-30,4300.00
+11,Receber,Cliente Épsilon,Vendas,Comercial,2025-12-22,2026-01-05,,4000.00
+12,Pagar,Fornecedor Aluguel,Aluguel,Administrativo,2025-12-28,2026-01-05,,2500.00
+13,Pagar,Operadora Internet,Internet,Administrativo,2025-12-30,2026-01-10,,260.00
+14,Pagar,Agência MKT,Marketing,Comercial,2026-01-02,2026-01-15,,900.00
+15,Receber,Cliente Zeta,Serviços,Operações,2026-01-03,2026-01-20,,3500.00
